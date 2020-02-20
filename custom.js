@@ -2,7 +2,7 @@ let content = document.getElementsByClassName('content');
 let slide = document.getElementById('slide');
 let mobile = document.getElementById('mobile');
 let extend = document.getElementsByClassName('extends');
-let name = document.getElementsByClassName('name');
+let des = document.getElementsByClassName('des');
 let image_src = [];
 const slide_width = $(window).width();
 const baseUrl = './images/slide/s';
@@ -44,9 +44,17 @@ mobile.addEventListener('click', ()=>{
     }
 });
 
-
-
-
+function showDes(des_index) {
+    let indexDes = des_index.getAttribute('data-des');
+    for (let i=0; i<des.length; i++) {
+        $(des[i]).css({
+            display: 'none'
+        });
+    }
+    $(des[indexDes]).css({
+        display: 'block'
+    });
+}
 
 
 setInterval(()=>{
