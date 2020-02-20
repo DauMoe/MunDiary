@@ -16,9 +16,9 @@ $(slide).css({
     height: (9/21) * slide_width + 'px'
 });
 slide.src = image_src[0];
-// $(content[1]).css({
-//     display: 'none'
-// });
+$(content[1]).css({
+    display: 'none'
+});
 start=()=>{
     $(content[0]).css({
         display: 'none'
